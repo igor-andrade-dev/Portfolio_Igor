@@ -1,0 +1,23 @@
+<div class="container-fluid bg-primary pt-2 pb-2">
+    <div class="container bar-flex-row">
+        <span class="text-white">
+            <i class="fa-regular fa-copyright"></i>
+            {{ currentYear }} Igor. All rights reserved.
+        </span>
+
+        <span class="text-white">
+            Developed with
+            <i
+                class="fa-brands fa-angular text-white cursor-pointer"
+                (click)="openLink('https://angular.dev')"
+            ></i>
+            and
+            <i
+                class="fa-brands fa-bootstrap text-white cursor-pointer"
+                (click)="openLink('https://getbootstrap.com')"
+            ></i>
+        </span>
+
+        <app-social-media />
+    </div>
+</div>

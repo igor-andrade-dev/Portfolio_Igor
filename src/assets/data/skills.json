@@ -1,0 +1,10 @@
+[
+  { "name": "Java" },
+  { "name": "Spring Boot" },
+  { "name": "Laravel" },
+  { "name": "RESTful APIs" },
+  { "name": "AWS (EC2, S3, RDS)" },
+  { "name": "Linux" },
+  { "name": "Angular" },
+  { "name": "React" }
+]

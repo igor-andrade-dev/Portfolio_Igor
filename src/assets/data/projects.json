@@ -1,0 +1,27 @@
+[   
+
+    {
+        "title": "Online Dentist",
+        "description": "Full-stack MERN application with secure user authentication (JWT via httpOnly cookies), protected dashboard access, and cloud deployment using Vercel, Railway, and MongoDB Atlas.",
+        "link": "https://github.com/IgorDevFullstack/Autenticare_Web",
+        "liveLink": "https://igor-autenticare-web.vercel.app/"
+    },
+    {
+        "title": "Clinical System",
+        "description": "Web system for medical clinic management, featuring patient registration, appointment scheduling, real-time administrative dashboard, and user authentication, developed with PHP8, MySQL, and Bootstrap. Live access available (email: igormtba@gmail.com / password: 123).",
+        "link": "https://github.com/IgorDevFullstack/Sistema_Clinico_Php_Mysql",
+        "liveLink": "https://igormtba.alwaysdata.net/"    
+    },
+    {
+        "title":"MicroServices",
+        "description": "Microservices-based backend architecture built with Java 17 and Spring Boot 3, featuring independent Customer and Product services with separate PostgreSQL databases, containerized using Docker and documented with Swagger.",
+        "link": "https://github.com/IgorDevFullstack/MicroServices"
+
+    },
+    {
+        "title": "E-commerce Platform with Admin Panel",
+        "description": "Integrated e-commerce and management system built with PHP, MySQL, and Docker, featuring a public website and an administrative dashboard. Live access available /sistema final url (email: igormtba@gmail.com / password: 123).",
+        "link": "https://github.com/IgorDevFullstack/System_Php_Docker",
+        "liveLink": "https://igorecommerce.alwaysdata.net/"
+    }
+]

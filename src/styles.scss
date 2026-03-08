@@ -1,0 +1,162 @@
+@use 'bootstrap/scss/bootstrap';
+@use '@fortawesome/fontawesome-free/css/all.css';
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #e7f1ff;
+}
+
+// ---------------------------------------------------------
+
+// common
+
+.custom-wrap-flex-row {
+    @extend .container;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.custom-card {
+    @extend .card;
+    @extend .shadow;
+    min-width: 25rem;
+    max-width: 25rem;
+    text-align: center;
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+// ---------------------------------------------------------
+
+// nav bar and footer
+
+.bar-flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+// ---------------------------------------------------------
+
+// nav bar
+
+.box-navbar-text {
+    @extend .text-white;
+    @extend .ms-3;
+    @extend .me-3;
+    @extend .text-decoration-none;
+}
+
+.box-navbar-text.active {
+    @extend .fw-bolder;
+}
+
+// ---------------------------------------------------------
+
+// home section
+.home-section-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    @extend .container;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+// ---------------------------------------------------------
+
+// for change cursor to pointer on icons
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.custom-wrap-flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.custom-card {
+  width: 320px;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #eaeaea;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card-body {
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+// ---------------------------------------------------------
+// navbar dropdown (Resume)
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: block; // OVERRIDE DO BOOTSTRAP (ESSENCIAL)
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 190px;
+  background-color: #0d6efd; // mesmo bg da navbar
+  border-radius: 6px;
+  padding: 0.5rem 0;
+  z-index: 1050;
+}
+
+.dropdown-item {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  user-select: none;
+}
+
+// ---------------------------------------------------------
+// FIX: Resume não deve parecer item ativo
+
+.dropdown > .box-navbar-text.active {
+  font-weight: inherit;     // remove bold
+  color: inherit;           // mantém cor normal
+}

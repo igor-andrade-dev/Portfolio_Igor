@@ -1,0 +1,17 @@
+[
+    {
+        "label": "Linkedin",
+        "link": "https://www.linkedin.com/in/igordevfullstack/",
+        "icon": "fab fa-linkedin"
+    },
+    {
+        "label": "GitHub",
+        "link": "https://github.com/IgorDevFullstack",
+        "icon": "fab fa-github"
+    },
+    {
+        "label": "Dev.to",
+        "link": "https://dev.to/igordevfullstack",
+        "icon": "fab fa-dev"
+    }
+]

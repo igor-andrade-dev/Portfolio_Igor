@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container bar-flex-row">
+    
+    <!-- Logo -->
+    <a class="navbar-brand fw-bold text-white" routerLink="/">
+      Igor
+    </a>
+
+    <!-- Menu -->
+    <div class="bar-flex-row align-items-center gap-3">
+
+      @for (item of menuItems; track item.label) {
+
+        <!-- Item normal -->
+        @if (!item.children) {
+          <a
+            class="box-navbar-text"
+            [routerLink]="item.link"
+            routerLinkActive="active"
+            aria-current="page"
+            [routerLinkActiveOptions]="{ exact: item.exact ?? false }"
+          >
+            {{ item.label }}
+          </a>
+        }
+
+        <!-- Item com dropdown (Resume) -->
+        @if (item.children) {
+          <div class="dropdown">
+            <span
+              class="box-navbar-text dropdown-toggle"
+              (click)="toggleDropdown(item.label)"
+            >
+              {{ item.label }}
+            </span>
+
+            @if (openDropdown === item.label) {
+              <div class="dropdown-menu">
+                @for (child of item.children; track child.label) {
+                  <a
+                    class="dropdown-item"
+                    [href]="child.link"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    {{ child.label }}
+                  </a>
+                }
+              </div>
+            }
+          </div>
+        }
+
+      }
+
+    </div>
+
+    <!-- Social -->
+    <app-social-media />
+
+  </div>
+</nav>

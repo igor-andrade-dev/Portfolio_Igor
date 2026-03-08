@@ -1,0 +1,12 @@
+<div class="home-section-box">
+    <h1>Skills</h1>
+    <div class="custom-wrap-flex-row">
+        @for (item of skillsItems; track item.name) {
+            <div class="custom-card text-bg-primary">
+                <div class="card-body">
+                    <h6>{{ item.name }}</h6>
+                </div>
+            </div>
+        }
+    </div>
+</div>

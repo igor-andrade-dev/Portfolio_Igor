@@ -1,0 +1,34 @@
+<div class="custom-wrap-flex-row">
+  @for (project of projects; track project.title) {
+    <div class="custom-card">
+      <div class="card-body">
+        <div>
+          <h4 class="card-title">{{ project.title }}</h4>
+
+          <p class="card-text text-secondary">
+            {{ project.description }}
+          </p>
+        </div>
+
+        <div class="d-flex gap-2 mt-3">
+          <button
+            *ngIf="project.liveLink"
+            (click)="openLink(project.liveLink)"
+            class="btn btn-primary"
+            aria-label="Open live project"
+          >
+            Live <i class="fa fa-eye"></i>
+          </button>
+
+          <button
+            (click)="openLink(project.link)"
+            class="btn btn-outline-primary"
+            aria-label="Open GitHub repository"
+          >
+            GitHub <i class="fa-brands fa-github"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  }
+</div>

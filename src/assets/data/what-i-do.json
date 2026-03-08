@@ -1,0 +1,19 @@
+
+[
+  {
+    "title": "Backend Development",
+    "icon": "fa-solid fa-server",
+    "description": "Building secure and scalable backend systems using Java and Laravel, with RESTful APIs and database integration"
+  },
+  {
+    "title": "Web Applications",
+    "icon": "fa-solid fa-code",
+    "description": "Developing responsive web applications with Angular, focusing on performance and clean user interfaces"
+  },
+  {
+    "title": "Cloud & Deployment",
+    "icon": "fa-solid fa-cloud",
+    "description": "Deploying web applications and integrating cloud services for scalable systems."
+  }
+]
+

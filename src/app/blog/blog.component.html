@@ -1,0 +1,13 @@
+<div class="custom-wrap-flex-row">
+    @for (blog of blogs; track blog.title) {
+        <div class="custom-card">
+            <div class="card-body">
+                <h4>{{ blog.title }}</h4>
+                <p class="text-secondary">{{ blog.description }}</p>
+                <button (click)="openLink(blog.link)" class="btn btn-primary">
+                    Read Article on <i class="fa-brands fa-dev"></i>
+                </button>
+            </div>
+        </div>
+    }
+</div>

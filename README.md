@@ -91,7 +91,7 @@ LinkedIn
 https://linkedin.com/in/igordevfullstack
 
 GitHub
-https://github.com/IgorDevFullstack
+https://github.com/igor-andrade-dev
 
 Email
 [igormtba@gmail.com](mailto:igormtba@gmail.com)

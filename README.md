@@ -6,7 +6,7 @@ Personal developer portfolio built with **Angular 17** and **Bootstrap**, showca
 
 Access the portfolio online:
 
-https://portifolio-igor-cesar-de-andrade.vercel.app
+https://portfolio-igor-angular.vercel.app/
 
 ## 👨‍💻 About
 

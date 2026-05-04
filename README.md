@@ -88,7 +88,7 @@ This project is deployed using **Vercel** for fast and reliable hosting.
 ## 📬 Contact
 
 LinkedIn
-https://linkedin.com/in/igordevfullstack
+https://www.linkedin.com/in/igor-andrade-dev/
 
 GitHub
 https://github.com/igor-andrade-dev

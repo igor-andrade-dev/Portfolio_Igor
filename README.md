@@ -1,8 +1,8 @@
-# Portfólio — Igor Andrade
+# Portfolio — Igor Andrade
 
-Portfólio profissional em Angular 22, com tema escuro e conteúdo em português.
+Professional portfolio built with Angular 22, a dark theme, and content in Portuguese and English.
 
-Demonstração: https://portfolio-igor-angular.vercel.app/
+Live site: https://portfolio-igor-angular.vercel.app/
 
 ## Stack
 
@@ -10,14 +10,14 @@ Demonstração: https://portfolio-igor-angular.vercel.app/
 - TypeScript
 - SCSS
 
-## Executar
+## Run locally
 
 ```bash
 npm install
 npx ng serve
 ```
 
-A aplicação abre em http://localhost:4200/
+The app opens at http://localhost:4200/
 
 ## Build
 
@@ -25,14 +25,14 @@ A aplicação abre em http://localhost:4200/
 npx ng build
 ```
 
-A saída fica em `dist/portifolio_igor`.
+The output is written to `dist/portifolio_igor`.
 
-## Publicação
+## Deployment
 
-O site é publicado na Vercel. Este repositório não dispara deploy automaticamente.
+The site is published on Vercel. This repository does not trigger a deploy by itself.
 
-## Contato
+## Contact
 
 - LinkedIn: https://www.linkedin.com/in/igor-andrade-dev/
 - GitHub: https://github.com/igor-andrade-dev
-- E-mail: igormtba@gmail.com
+- Email: igormtba@gmail.com

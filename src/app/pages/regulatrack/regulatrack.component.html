@@ -1,0 +1,93 @@
+<article class="case">
+    <header class="case-hero">
+        <div class="frame">
+            <a class="back" routerLink="/" fragment="projetos">{{ text().caseStudy.back }}</a>
+            <p class="badge">{{ text().caseStudy.badge }}</p>
+            <h1>RegulaTrack</h1>
+            <p class="lede">{{ text().caseStudy.lede }}</p>
+            <div class="actions">
+                <a class="button button-primary" [href]="text().links.regulatrackRepo" target="_blank" rel="noopener noreferrer">{{ text().caseStudy.repo }}</a>
+                <a class="button button-secondary" [href]="text().links.regulatrackApp" target="_blank" rel="noopener noreferrer">{{ text().caseStudy.demo }}</a>
+                <a class="button button-ghost" [href]="text().links.regulatrackApi" target="_blank" rel="noopener noreferrer">Swagger</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="frame case-grid">
+            <div>
+                <h2>{{ text().caseStudy.problemTitle }}</h2>
+                <p>{{ text().caseStudy.problem }}</p>
+                <h2>{{ text().caseStudy.goalTitle }}</h2>
+                <p>{{ text().caseStudy.goal }}</p>
+            </div>
+            <div>
+                <h2>{{ text().caseStudy.architectureTitle }}</h2>
+                <p>{{ text().caseStudy.architecture }}</p>
+                <ol class="flow">
+                    @for (step of text().flow; track step.label) {
+                        <li>
+                            <strong>{{ step.label }}</strong>
+                            <span>{{ step.detail }}</span>
+                        </li>
+                    }
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="frame case-grid">
+            <div>
+                <h2>{{ text().caseStudy.authTitle }}</h2>
+                @for (paragraph of text().caseStudy.auth; track paragraph) {
+                    <p>{{ paragraph }}</p>
+                }
+            </div>
+            <div>
+                <h2>{{ text().caseStudy.featuresTitle }}</h2>
+                <ul class="plain-list">
+                    @for (item of text().caseStudy.features; track item) {
+                        <li>{{ item }}</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="frame case-grid">
+            <div>
+                <h2>{{ text().caseStudy.databaseTitle }}</h2>
+                <p>{{ text().caseStudy.database }}</p>
+                <ol class="migrations">
+                    @for (migration of text().migrations; track migration; let index = $index) {
+                        <li><span>V{{ index + 1 }}</span>{{ migration }}</li>
+                    }
+                </ol>
+            </div>
+            <div>
+                <h2>{{ text().caseStudy.infraTitle }}</h2>
+                @for (paragraph of text().caseStudy.infra; track paragraph) {
+                    <p>{{ paragraph }}</p>
+                }
+                <h2>{{ text().caseStudy.decisionsTitle }}</h2>
+                <ul class="plain-list">
+                    @for (item of text().caseStudy.decisions; track item) {
+                        <li>{{ item }}</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="frame narrow">
+            <h2>{{ text().caseStudy.learningTitle }}</h2>
+            @for (paragraph of text().caseStudy.learning; track paragraph) {
+                <p>{{ paragraph }}</p>
+            }
+            <a class="button button-secondary" routerLink="/" fragment="contato">{{ text().caseStudy.talk }}</a>
+        </div>
+    </section>
+</article>

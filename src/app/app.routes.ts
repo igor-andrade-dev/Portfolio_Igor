@@ -1,11 +1,16 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ProjectComponent } from './project/project.component';
-import { BlogComponent } from './blog/blog.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent, pathMatch: 'full' },
-    { path: 'projects', component: ProjectComponent },
-    { path: 'blogs', component: BlogComponent },
-    { path: '**', component: HomeComponent },
+    {
+        path: '',
+        loadComponent: () => import('./pages/home/home.component').then((m) => m.HomeComponent),
+    },
+    {
+        path: 'projetos/regulatrack',
+        loadComponent: () =>
+            import('./pages/regulatrack/regulatrack.component').then((m) => m.RegulaTrackComponent),
+    },
+    { path: 'projects', redirectTo: '', pathMatch: 'full' },
+    { path: 'blogs', redirectTo: '', pathMatch: 'full' },
+    { path: '**', redirectTo: '' },
 ];

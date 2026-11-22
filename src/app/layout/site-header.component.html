@@ -1,0 +1,54 @@
+<header class="site-header">
+    <div class="frame header-bar">
+        <a class="wordmark" routerLink="/" fragment="inicio" (click)="close()">
+            <span>Igor Andrade</span>
+            <small>{{ text().ui.wordmark }}</small>
+        </a>
+
+        <div class="header-end">
+            <div class="lang-switch" role="group" [attr.aria-label]="text().ui.language">
+                <button
+                    type="button"
+                    [class.is-active]="locale.lang() === 'pt'"
+                    [attr.aria-pressed]="locale.lang() === 'pt'"
+                    (click)="locale.use('pt')"
+                >
+                    PT
+                </button>
+                <button
+                    type="button"
+                    [class.is-active]="locale.lang() === 'en'"
+                    [attr.aria-pressed]="locale.lang() === 'en'"
+                    (click)="locale.use('en')"
+                >
+                    EN
+                </button>
+            </div>
+
+            <button
+                class="menu-button"
+                type="button"
+                [attr.aria-expanded]="open()"
+                aria-controls="menu-principal"
+                (click)="toggle()"
+            >
+                {{ open() ? text().ui.close : text().ui.menu }}
+            </button>
+
+            <nav id="menu-principal" class="site-nav" [class.is-open]="open()" [attr.aria-label]="text().ui.navLabel">
+                @for (item of text().nav; track item.fragment) {
+                    <a [routerLink]="['/']" [fragment]="item.fragment" (click)="close()">
+                        {{ item.label }}
+                    </a>
+                }
+                <details class="resume-menu">
+                    <summary>{{ text().ui.resume }}</summary>
+                    <div>
+                        <a [href]="text().links.resumePt" download>{{ text().ui.resumePt }}</a>
+                        <a [href]="text().links.resumeEn" download>{{ text().ui.resumeEn }}</a>
+                    </div>
+                </details>
+            </nav>
+        </div>
+    </div>
+</header>

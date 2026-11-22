@@ -1,0 +1,228 @@
+<section class="hero" id="inicio">
+    <div class="frame hero-grid">
+        <div class="hero-copy">
+            <p class="eyebrow">{{ text().ui.eyebrow }}</p>
+            <h1>Igor Andrade</h1>
+            <p class="role">{{ text().role }}</p>
+            <blockquote>{{ text().impact }}</blockquote>
+            <p class="lede">{{ text().about[0] }}</p>
+            <div class="actions">
+                <a class="button button-primary" routerLink="/" fragment="projetos">{{ text().ui.viewProjects }}</a>
+                <a class="button button-secondary" [href]="resumeHref()" download>{{ text().ui.downloadResume }}</a>
+                <a class="button button-ghost" [href]="text().links.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="button button-ghost" routerLink="/" fragment="contato">{{ text().ui.contactCta }}</a>
+            </div>
+        </div>
+
+        <figure class="portrait">
+            <img
+                ngSrc="assets/igor.jpg"
+                width="640"
+                height="640"
+                priority
+                [alt]="text().ui.photoAlt"
+            />
+            <figcaption>Igor Andrade</figcaption>
+        </figure>
+    </div>
+</section>
+
+<section class="section" id="sobre">
+    <div class="frame split">
+        <div>
+            <p class="index">01</p>
+            <h2>{{ text().ui.aboutTitle }}</h2>
+        </div>
+        <div class="prose">
+            @for (paragraph of text().about.slice(1); track paragraph) {
+                <p>{{ paragraph }}</p>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt" id="experiencia">
+    <div class="frame">
+        <div class="section-heading">
+            <p class="index">02</p>
+            <h2>{{ text().ui.experienceTitle }}</h2>
+            <p>{{ text().ui.experienceIntro }}</p>
+        </div>
+
+        <ol class="timeline">
+            @for (job of text().experience; track job.organization) {
+                <li>
+                    <p class="period">{{ job.period }}</p>
+                    <h3>{{ job.role }}</h3>
+                    <p class="org">{{ job.organization }}</p>
+                    <p>{{ job.summary }}</p>
+                    <ul>
+                        @for (point of job.points; track point) {
+                            <li>{{ point }}</li>
+                        }
+                    </ul>
+                </li>
+            }
+        </ol>
+
+        <div class="education">
+            <h3>{{ text().ui.educationTitle }}</h3>
+            <ul>
+                @for (item of text().education; track item.title) {
+                    <li>
+                        <strong>{{ item.title }}</strong>
+                        <span>{{ item.organization }} · {{ item.period }}</span>
+                        @if (item.href) {
+                            <a [href]="item.href" target="_blank" rel="noopener noreferrer">{{ item.linkLabel }}</a>
+                        }
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="projetos">
+    <div class="frame">
+        <div class="section-heading">
+            <p class="index">03</p>
+            <h2>{{ text().ui.projectsTitle }}</h2>
+            <p>{{ text().ui.projectsIntro }}</p>
+        </div>
+
+        <div class="project-list">
+            @for (project of text().projects; track project.id) {
+                <article class="project" [class.project-featured]="project.id === 'regulatrack'">
+                    <header>
+                        <p class="badge">{{ project.badge }}</p>
+                        <h3>{{ project.title }}</h3>
+                        <p class="kicker">{{ project.kicker }}</p>
+                    </header>
+                    <p>{{ project.summary }}</p>
+                    <dl>
+                        <div>
+                            <dt>{{ text().ui.problem }}</dt>
+                            <dd>{{ project.problem }}</dd>
+                        </div>
+                        <div>
+                            <dt>{{ text().ui.contribution }}</dt>
+                            <dd>{{ project.contribution }}</dd>
+                        </div>
+                        <div>
+                            <dt>{{ text().ui.state }}</dt>
+                            <dd>{{ project.status }}</dd>
+                        </div>
+                    </dl>
+                    <ul class="tags">
+                        @for (tech of project.technologies; track tech) {
+                            <li>{{ tech }}</li>
+                        }
+                    </ul>
+                    @if (project.links.length) {
+                        <div class="actions">
+                            @for (link of project.links; track link.href) {
+                                @if (link.internal) {
+                                    <a class="button button-secondary" [routerLink]="link.href">{{ link.label }}</a>
+                                } @else {
+                                    <a class="button button-ghost" [href]="link.href" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+                                }
+                            }
+                        </div>
+                    }
+                </article>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt" id="tecnologias">
+    <div class="frame">
+        <div class="section-heading">
+            <p class="index">04</p>
+            <h2>{{ text().ui.stackTitle }}</h2>
+            <p>{{ text().ui.stackIntro }}</p>
+        </div>
+        <div class="stack-grid">
+            @for (group of text().stack; track group.title) {
+                <article>
+                    <h3>{{ group.title }}</h3>
+                    <p>{{ group.note }}</p>
+                    <ul>
+                        @for (item of group.items; track item) {
+                            <li>{{ item }}</li>
+                        }
+                    </ul>
+                </article>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="section" id="seguranca">
+    <div class="frame security">
+        <div>
+            <p class="index">05</p>
+            <h2>{{ text().ui.securityTitle }}</h2>
+            @for (paragraph of text().ui.securityBody; track paragraph) {
+                <p>{{ paragraph }}</p>
+            }
+        </div>
+        <ul class="security-list">
+            @for (point of text().securityPoints; track point) {
+                <li>{{ point }}</li>
+            }
+        </ul>
+    </div>
+</section>
+
+<section class="section section-alt" id="laboratorios">
+    <div class="frame">
+        <div class="section-heading">
+            <p class="index">06</p>
+            <h2>{{ text().ui.labsTitle }}</h2>
+            <p>{{ text().ui.labsIntro }}</p>
+        </div>
+        <div class="lab-grid">
+            @for (lab of text().labs; track lab.name) {
+                <article>
+                    <p class="badge">{{ lab.category }}</p>
+                    <h3>{{ lab.name }}</h3>
+                    <dl>
+                        <div>
+                            <dt>{{ text().ui.objective }}</dt>
+                            <dd>{{ lab.objective }}</dd>
+                        </div>
+                        <div>
+                            <dt>{{ text().ui.investigation }}</dt>
+                            <dd>{{ lab.method }}</dd>
+                        </div>
+                        <div>
+                            <dt>{{ text().ui.tools }}</dt>
+                            <dd>{{ lab.tools }}</dd>
+                        </div>
+                        <div>
+                            <dt>{{ text().ui.learning }}</dt>
+                            <dd>{{ lab.learning }}</dd>
+                        </div>
+                    </dl>
+                    <p class="status">{{ lab.status }}</p>
+                    <a [href]="lab.href" target="_blank" rel="noopener noreferrer">{{ text().ui.openMaterial }}</a>
+                </article>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="section contact" id="contato">
+    <div class="frame contact-panel">
+        <p class="index">07</p>
+        <h2>{{ text().ui.contactTitle }}</h2>
+        <p>{{ text().ui.contactBody }}</p>
+        <div class="actions">
+            <a class="button button-primary" href="mailto:{{ text().email }}">{{ text().email }}</a>
+            <a class="button button-secondary" [href]="text().links.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="button button-ghost" [href]="text().links.github" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="button button-ghost" [href]="resumeHref()" download>{{ text().ui.currentResume }}</a>
+        </div>
+    </div>
+</section>

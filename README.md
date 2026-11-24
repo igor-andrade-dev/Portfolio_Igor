@@ -2,7 +2,7 @@
 
 Professional portfolio built with Angular 22, a dark theme, and content in Portuguese and English.
 
-Live site: https://portfolio-igor-angular.vercel.app/
+Live site: https://www.igorandrade.dev.br/
 
 ## Stack
 

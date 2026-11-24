@@ -79,6 +79,36 @@
                 }
             </ul>
         </div>
+
+        <div class="education">
+            <h3>{{ text().ui.credentialsTitle }}</h3>
+            <p>{{ text().ui.credentialsIntro }}</p>
+            <ul>
+                @for (item of text().credentials; track item.href) {
+                    <li>
+                        <strong>{{ item.title }}</strong>
+                        <span>{{ item.organization }} · {{ item.period }}</span>
+                        <span>{{ item.note }}</span>
+                        <a [href]="item.href" target="_blank" rel="noopener noreferrer">{{ item.linkLabel }}</a>
+                    </li>
+                }
+            </ul>
+        </div>
+
+        <div class="education">
+            <h3>{{ text().ui.programsTitle }}</h3>
+            <p>{{ text().ui.programsIntro }}</p>
+            <ul>
+                @for (item of text().programs; track item.href) {
+                    <li>
+                        <strong>{{ item.title }}</strong>
+                        <span>{{ item.organization }} · {{ item.period }}</span>
+                        <span>{{ item.note }}</span>
+                        <a [href]="item.href" target="_blank" rel="noopener noreferrer">{{ item.linkLabel }}</a>
+                    </li>
+                }
+            </ul>
+        </div>
     </div>
 </section>
 

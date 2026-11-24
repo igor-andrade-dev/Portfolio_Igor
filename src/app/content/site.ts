@@ -1,7 +1,7 @@
 /**
  * Conteúdo do portfólio. O português é o padrão; o inglês fica em site.en.ts.
  */
-export const siteUrl = 'https://portfolio-igor-angular.vercel.app';
+export const siteUrl = 'https://www.igorandrade.dev.br';
 
 export interface ContentLink {
     label: string;
@@ -49,6 +49,22 @@ export interface PortfolioContent {
         href: string;
         linkLabel: string;
     }[];
+    credentials: {
+        title: string;
+        organization: string;
+        period: string;
+        href: string;
+        linkLabel: string;
+        note: string;
+    }[];
+    programs: {
+        title: string;
+        organization: string;
+        period: string;
+        href: string;
+        linkLabel: string;
+        note: string;
+    }[];
     projects: {
         id: string;
         badge: string;
@@ -95,6 +111,10 @@ export interface PortfolioContent {
         experienceTitle: string;
         experienceIntro: string;
         educationTitle: string;
+        credentialsTitle: string;
+        credentialsIntro: string;
+        programsTitle: string;
+        programsIntro: string;
         projectsTitle: string;
         projectsIntro: string;
         problem: string;
@@ -147,7 +167,7 @@ export interface PortfolioContent {
 
 export const sitePt: PortfolioContent = {
     name: 'Igor Andrade',
-    role: 'Desenvolvedor de Software | Backend, Cloud e Segurança de Aplicações',
+    role: 'Desenvolvedor de Software | Backend, Cloud & Application Security',
     impact:
         'Construo sistemas, resolvo problemas complexos e penso em segurança desde a arquitetura.',
     email: 'igormtba@gmail.com',
@@ -169,9 +189,9 @@ export const sitePt: PortfolioContent = {
     },
     seo: {
         home: {
-            title: 'Igor Andrade | Desenvolvedor de Software, Backend e Segurança de Aplicações',
+            title: 'Igor Andrade | Desenvolvedor de Software, Backend, Cloud & Application Security',
             description:
-                'Portfólio profissional de Igor Andrade. Desenvolvimento de software, Java, Spring Boot, Angular, APIs, AWS e segurança de aplicações.',
+                'Portfólio de Igor Andrade. Backend Java, Angular, AWS e segurança de aplicações, com sistemas em produção e laboratórios de estudo.',
             path: '/',
         },
         regulatrack: {
@@ -192,7 +212,7 @@ export const sitePt: PortfolioContent = {
     about: [
         'Sou desenvolvedor de software e trabalho com a construção, a manutenção e a evolução de aplicações web e sistemas de negócio.',
         'Minha atuação passa por backend, frontend, APIs, bancos de dados, autenticação, autorização, controle de acesso e infraestrutura. O que me interessa é entender como o sistema funciona, onde a regra de negócio quebra e como corrigir isso sem perder o que já está em produção.',
-        'Tenho interesse especial em segurança de aplicações, análise de vulnerabilidades e pentest em ambientes autorizados. Essa prática ainda é de estudo e laboratório: uso o que aprendo construindo software para reconhecer falhas com mais precisão.',
+        'Estudo segurança de aplicações web, o OWASP Top 10 e investigação de vulnerabilidades em laboratório e em cursos. A credencial Cisco Ethical Hacker inclui atividades práticas com Kali Linux. Esse estudo acompanha o desenvolvimento de software e permanece separado da atuação profissional.',
         'Utilizo ferramentas modernas de IA como apoio à engenharia de software, mantendo validação técnica, revisão de código e responsabilidade sobre as soluções implementadas.',
     ],
     experience: [
@@ -201,13 +221,14 @@ export const sitePt: PortfolioContent = {
             role: 'Analista Desenvolvedor Web',
             organization: 'Assembleia Legislativa do Paraná (via Facilities)',
             summary:
-                'Desenvolvimento, manutenção e evolução de sistemas que sustentam processos e regras de negócio reais. Os nomes dos sistemas internos não são publicados.',
+                'Desenvolvimento, manutenção e evolução de sistemas web que sustentam processos reais. Nomes de sistemas e dados institucionais permanecem fora desta página. Kali Linux, OWASP Top 10 e investigação de vulnerabilidades estão na formação e nos laboratórios, em seções próprias.',
             points: [
                 'Desenvolvimento e evolução de funcionalidades, com integração entre frontend e backend.',
                 'Manutenção de aplicações existentes e de sistemas legados.',
                 'Implementação de regras de negócio, validação de dados e organização de estados de processo.',
-                'Gerenciamento de permissões e controle de acesso.',
-                'Investigação de falhas de persistência, duplicidade de registros e erros HTTP 500.',
+                'Controle de acesso e gerenciamento de permissões nas aplicações mantidas.',
+                'Autenticação e autorização consideradas no desenvolvimento e na manutenção do software.',
+                'Investigação técnica de falhas de persistência, duplicidade de registros e erros HTTP 500.',
                 'Análise de banco de dados e geração de documentos PDF.',
             ],
         },
@@ -238,6 +259,34 @@ export const sitePt: PortfolioContent = {
             period: 'Julho de 2024 — outubro de 2025',
             href: 'https://drive.google.com/file/d/1Ca7xHzrcTt5f3pLo9Sua1WgAHXBqRk9r/view',
             linkLabel: 'Ver certificado',
+        },
+    ],
+    credentials: [
+        {
+            title: 'Ethical Hacker',
+            organization: 'Cisco Networking Academy',
+            period: 'Junho de 2026',
+            href: 'https://www.credly.com/badges/2271ceb0-b06c-4f8c-bdb3-82bb8955e30a',
+            linkLabel: 'Ver credencial',
+            note: 'Conclusão de curso, em nível de estudante. A Credly confirma a emissão para Igor César de Andrade e atividades práticas com Kali Linux. O mês publicado no LinkedIn é junho de 2026.',
+        },
+        {
+            title: 'Introduction to Cybersecurity',
+            organization: 'Cisco Networking Academy',
+            period: '15 de junho de 2025',
+            href: 'https://www.credly.com/badges/a89c08a3-adf7-4b22-b316-104fc9b2f1bf',
+            linkLabel: 'Ver credencial',
+            note: 'Curso introdutório. A Credly registra a emissão em 15 de junho de 2025 para Igor César de Andrade.',
+        },
+    ],
+    programs: [
+        {
+            title: 'AWS Educate — Emerging Talent Community',
+            organization: 'Amazon Web Services',
+            period: 'Novembro de 2025',
+            href: 'https://pages.awseducate.com/ETC_badge.html',
+            linkLabel: 'Ver página do programa',
+            note: 'Programa de aprendizagem para estudantes. O mês vem do LinkedIn. A página pública é um selo da comunidade e não traz identificador individual.',
         },
     ],
     projects: [
@@ -284,6 +333,53 @@ export const sitePt: PortfolioContent = {
                 {
                     label: 'Swagger',
                     href: 'https://regulatrack-api.duckdns.org/swagger-ui/index.html',
+                    internal: false,
+                },
+            ],
+        },
+        {
+            id: 'microservicos',
+            badge: 'Projeto complementar',
+            title: 'Sistema de microserviços',
+            kicker: 'Customer Service e Product Service',
+            summary:
+                'Dois serviços independentes, cada um com o próprio banco PostgreSQL, API REST e documentação Swagger. O README público descreve a execução local com Docker Compose.',
+            problem:
+                'Separar cadastro de clientes e de produtos em serviços que possam subir, versionar e documentar de forma independente.',
+            contribution:
+                'API em Java 17 e Spring Boot 3, persistência com Spring Data JPA, validação e composição dos containers. Não há demonstração publicada.',
+            technologies: ['Java 17', 'Spring Boot 3', 'PostgreSQL', 'Docker', 'Swagger/OpenAPI'],
+            status: 'Projeto de estudo, executado localmente. Sem URL pública.',
+            links: [
+                {
+                    label: 'Repositório',
+                    href: 'https://github.com/igor-andrade-dev/MicroServices',
+                    internal: false,
+                },
+            ],
+        },
+        {
+            id: 'autenticare',
+            badge: 'Projeto complementar',
+            title: 'Autenticare Web',
+            kicker: 'Autenticação MERN',
+            summary:
+                'Aplicação React, Node.js, Express e MongoDB com cadastro, login e rotas protegidas. O código do login assina um JWT e grava o token em cookie HttpOnly. O repositório também contém telas de agendamento.',
+            problem:
+                'Manter a sessão fora do armazenamento visível do navegador e só liberar as rotas protegidas depois da autenticação.',
+            contribution:
+                'Fluxo de registro e login, hash de senha, cookie HttpOnly e publicação do frontend. O endereço da API de produção fica em variável de ambiente e não está no repositório.',
+            technologies: ['MongoDB', 'Express', 'React', 'Node.js', 'JWT'],
+            status: 'Frontend publicado. A hospedagem da API em produção não está documentada no código público.',
+            links: [
+                {
+                    label: 'Repositório',
+                    href: 'https://github.com/igor-andrade-dev/Autenticare_Web',
+                    internal: false,
+                },
+                {
+                    label: 'Frontend',
+                    href: 'https://igor-autenticare-web.vercel.app/',
                     internal: false,
                 },
             ],
@@ -400,13 +496,14 @@ export const sitePt: PortfolioContent = {
         },
         {
             title: 'Estudo em laboratório',
-            note: 'Prática autorizada de CTF e análise. Não é experiência profissional de pentest.',
+            note: 'Cursos, CTFs e análise em ambiente autorizado. Separado da experiência profissional de desenvolvimento.',
             items: [
-                'Análise de aplicações web',
+                'OWASP Top 10',
+                'Kali Linux',
+                'Segurança de aplicações web',
                 'Investigação de vulnerabilidades',
                 'Análise de requisições HTTP',
                 'CTFs',
-                'Pentest em ambiente autorizado',
             ],
         },
     ],
@@ -495,8 +592,13 @@ export const sitePt: PortfolioContent = {
         aboutTitle: 'Sobre',
         experienceTitle: 'Experiência',
         experienceIntro:
-            'Períodos e cargos como estão no histórico do portfólio. Projetos independentes ficam na seção seguinte.',
+            'Cargos de desenvolvimento. Credenciais de curso e programas de aprendizagem ficam separados, abaixo da formação.',
         educationTitle: 'Formação',
+        credentialsTitle: 'Credenciais de curso',
+        credentialsIntro:
+            'Conclusões com página pública. São cursos da Cisco Networking Academy, em nível de estudante, e não um cargo de pentest.',
+        programsTitle: 'Programas de aprendizagem',
+        programsIntro: 'Participação em comunidade de estudo. Não é uma certificação técnica da AWS.',
         projectsTitle: 'Projetos',
         projectsIntro:
             'Uma seleção curta. Cada item diz o que foi feito, o problema, a stack, a contribuição e onde está a evidência.',
@@ -508,12 +610,12 @@ export const sitePt: PortfolioContent = {
             'Agrupadas pelo uso. Não há barra de percentual: a evidência está nos projetos e na experiência.',
         securityTitle: 'Desenvolvimento com segurança desde a arquitetura.',
         securityBody: [
-            'Minha experiência em desenvolvimento me permite compreender como as aplicações são construídas, como seus componentes se comunicam e onde podem surgir problemas de segurança.',
-            'Tenho interesse em investigar vulnerabilidades, compreender suas causas e contribuir para soluções mais seguras. O pentest que pratico está em laboratório e competições autorizadas, separado da experiência profissional de desenvolvimento.',
+            'Construo e mantenho software com autenticação, autorização, controle de acesso e validação. Essa prática profissional é diferente do estudo de segurança ofensiva.',
+            'No laboratório e na Cisco Networking Academy trabalho OWASP Top 10, segurança de aplicações web, investigação de vulnerabilidades e Kali Linux. Os writeups de CTF e o laboratório de APIs estão publicados. Nenhum desses estudos descreve teste, auditoria ou vulnerabilidade da Assembleia Legislativa.',
         ],
         labsTitle: 'Laboratórios de segurança e CTFs',
         labsIntro:
-            'Estudo prático em ambiente controlado. Não substitui experiência profissional de segurança.',
+            'Estudo prático em ambiente controlado, separado dos cargos de desenvolvimento.',
         objective: 'Objetivo',
         investigation: 'Investigação',
         tools: 'Ferramentas',

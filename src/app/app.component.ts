@@ -1,3 +1,4 @@
+import { DOCUMENT, ViewportScroller } from '@angular/common';
 import { Component, DestroyRef, effect, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
@@ -21,6 +22,12 @@ export class AppComponent {
     protected readonly text = this.locale.content;
 
     constructor() {
+        const document = inject(DOCUMENT);
+        inject(ViewportScroller).setOffset(() => [
+            0,
+            (document.querySelector('.site-header')?.getBoundingClientRect().height ?? 0) + 16,
+        ]);
+
         this.router.events
             .pipe(
                 filter((event): event is NavigationEnd => event instanceof NavigationEnd),

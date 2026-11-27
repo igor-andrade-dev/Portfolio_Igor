@@ -16,6 +16,13 @@ export class SiteHeaderComponent {
         this.open.update((value) => !value);
     }
 
+    protected dismissMenu(button: HTMLButtonElement): void {
+        if (this.open() && button.getClientRects().length) {
+            this.close();
+            button.focus();
+        }
+    }
+
     protected close(): void {
         this.open.set(false);
     }

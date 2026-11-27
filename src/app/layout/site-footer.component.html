@@ -1,11 +1,34 @@
 <footer class="site-footer">
     <div class="frame footer-bar">
-        <p>© {{ year }} Igor Andrade. {{ text().ui.footer }}</p>
+        <p>© {{ year }} {{ text().name }}</p>
         <ul>
-            <li><a [href]="text().links.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a [href]="text().links.github" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a [href]="text().links.devto" target="_blank" rel="noopener noreferrer">Dev.to</a></li>
-            <li><a href="mailto:{{ text().email }}">{{ text().ui.email }}</a></li>
+            <li>
+                <a
+                    [href]="text().links.linkedin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >LinkedIn</a
+                >
+            </li>
+            <li>
+                <a
+                    [href]="text().links.github"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                >
+            </li>
+            <li>
+                <a
+                    [href]="text().links.devto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Dev.to</a
+                >
+            </li>
+            <li>
+                <a href="mailto:{{ text().email }}">{{ text().ui.email }}</a>
+            </li>
         </ul>
     </div>
 </footer>

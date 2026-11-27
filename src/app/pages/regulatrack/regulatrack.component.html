@@ -1,14 +1,34 @@
 <article class="case">
     <header class="case-hero">
         <div class="frame">
-            <a class="back" routerLink="/" fragment="projetos">{{ text().caseStudy.back }}</a>
+            <a class="back" routerLink="/" fragment="projetos">{{
+                text().caseStudy.back
+            }}</a>
             <p class="badge">{{ text().caseStudy.badge }}</p>
             <h1>RegulaTrack</h1>
             <p class="lede">{{ text().caseStudy.lede }}</p>
             <div class="actions">
-                <a class="button button-primary" [href]="text().links.regulatrackRepo" target="_blank" rel="noopener noreferrer">{{ text().caseStudy.repo }}</a>
-                <a class="button button-secondary" [href]="text().links.regulatrackApp" target="_blank" rel="noopener noreferrer">{{ text().caseStudy.demo }}</a>
-                <a class="button button-ghost" [href]="text().links.regulatrackApi" target="_blank" rel="noopener noreferrer">Swagger</a>
+                <a
+                    class="button button-primary"
+                    [href]="text().links.regulatrackRepo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ text().caseStudy.repo }}</a
+                >
+                <a
+                    class="button button-secondary"
+                    [href]="text().links.regulatrackApp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >{{ text().caseStudy.demo }}</a
+                >
+                <a
+                    class="button button-ghost"
+                    [href]="text().links.regulatrackApi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Swagger/OpenAPI</a
+                >
             </div>
         </div>
     </header>
@@ -61,8 +81,15 @@
                 <h2>{{ text().caseStudy.databaseTitle }}</h2>
                 <p>{{ text().caseStudy.database }}</p>
                 <ol class="migrations">
-                    @for (migration of text().migrations; track migration; let index = $index) {
-                        <li><span>V{{ index + 1 }}</span>{{ migration }}</li>
+                    @for (
+                        migration of text().migrations;
+                        track migration;
+                        let index = $index
+                    ) {
+                        <li>
+                            <span>V{{ index + 1 }}</span
+                            >{{ migration }}
+                        </li>
                     }
                 </ol>
             </div>
@@ -87,7 +114,12 @@
             @for (paragraph of text().caseStudy.learning; track paragraph) {
                 <p>{{ paragraph }}</p>
             }
-            <a class="button button-secondary" routerLink="/" fragment="contato">{{ text().caseStudy.talk }}</a>
+            <a
+                class="button button-secondary"
+                routerLink="/"
+                fragment="contato"
+                >{{ text().caseStudy.talk }}</a
+            >
         </div>
     </section>
 </article>

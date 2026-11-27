@@ -28,11 +28,12 @@ describe('conteúdo do portfólio', () => {
                 'https://www.credly.com/badges/2271ceb0-b06c-4f8c-bdb3-82bb8955e30a',
                 'https://www.credly.com/badges/a89c08a3-adf7-4b22-b316-104fc9b2f1bf',
             ]);
-            expect(site.programs[0].href).toBe('https://pages.awseducate.com/ETC_badge.html');
             const assembly = site.experience[0];
+            const assemblyText = `${assembly.summary} ${assembly.points.join(' ')}`.toLowerCase();
             expect(assembly.organization).toContain('Assembleia Legislativa');
-            expect(assembly.points.join(' ').toLowerCase()).not.toContain('kali');
-            expect(assembly.points.join(' ').toLowerCase()).not.toContain('owasp');
+            expect(assemblyText).toContain('kali');
+            expect(assemblyText).toMatch(/develop|desenvolv/);
+            expect(assemblyText).not.toContain('owasp');
         }
         expect(JSON.stringify(locales)).not.toContain('portfolio-igor-angular.vercel.app');
         expect(JSON.stringify(locales)).not.toContain('alwaysdata.net');

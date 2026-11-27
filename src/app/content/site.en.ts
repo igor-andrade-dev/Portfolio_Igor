@@ -3,7 +3,9 @@ import { PortfolioContent } from './site';
 export const siteEn: PortfolioContent = {
     name: 'Igor Andrade',
     role: 'Software Developer | Backend, Cloud & Application Security',
-    impact: 'I build systems, solve complex problems, and think about security from the architecture up.',
+    heroDescription:
+        'I build and maintain web applications and business systems, bringing together backend development, infrastructure, and application security.',
+    impact: 'I build systems, solve problems, and consider security from the design stage.',
     email: 'igormtba@gmail.com',
     links: {
         linkedin: 'https://www.linkedin.com/in/igor-andrade-dev/',
@@ -14,17 +16,20 @@ export const siteEn: PortfolioContent = {
         photo: 'assets/igor.jpg',
         regulatrackRepo: 'https://github.com/igor-andrade-dev/RegulaTrack',
         regulatrackApp: 'https://regulatrack.duckdns.org',
-        regulatrackApi: 'https://regulatrack-api.duckdns.org/swagger-ui/index.html',
+        regulatrackApi:
+            'https://regulatrack-api.duckdns.org/swagger-ui/index.html',
         ctfWriteups: 'https://github.com/igor-andrade-dev/ctf-writeups',
         apiSecurity: 'https://github.com/igor-andrade-dev/api-security-testing',
-        meuMomentoPrivacy: 'https://github.com/igor-andrade-dev/meu-momento-privacidade',
-        certificate: 'https://drive.google.com/file/d/1Ca7xHzrcTt5f3pLo9Sua1WgAHXBqRk9r/view',
+        meuMomentoPrivacy:
+            'https://github.com/igor-andrade-dev/meu-momento-privacidade',
+        certificate:
+            'https://drive.google.com/file/d/1Ca7xHzrcTt5f3pLo9Sua1WgAHXBqRk9r/view',
     },
     seo: {
         home: {
-            title: 'Igor Andrade | Software Developer, Backend, Cloud & Application Security',
+            title: 'Igor Andrade | Software Development, Cloud and Application Security',
             description:
-                'Portfolio of Igor Andrade. Java backend, Angular, AWS, and application security, with production systems and lab study.',
+                'Explore Igor Andrade’s work on web applications, backend and cloud projects, and application security.',
             path: '/',
         },
         regulatrack: {
@@ -43,10 +48,9 @@ export const siteEn: PortfolioContent = {
         { label: 'Contact', fragment: 'contato' },
     ],
     about: [
-        'I am a software developer. I build, maintain, and evolve web applications and business systems.',
-        'My work covers backend, frontend, APIs, databases, authentication, authorization, access control, and infrastructure. I want to understand how a system works, where a business rule breaks, and how to fix it without losing what is already in production.',
-        'I study web application security, the OWASP Top 10, and vulnerability investigation in labs and courses. The Cisco Ethical Hacker credential includes hands-on work with Kali Linux. That study sits alongside software development and stays separate from my professional roles.',
-        'I use modern AI tools to support software engineering, and I keep technical validation, code review, and responsibility for the solutions I ship.',
+        'I work across the interface and infrastructure, connecting APIs and databases and managing how users and systems access each resource.',
+        'When a business rule fails, I trace the impact on the workflow and validate the fix to preserve the behavior people rely on in production.',
+        'I use AI tools to support code analysis, debugging, refactoring, and documentation. I review the changes and own the technical decisions.',
     ],
     experience: [
         {
@@ -54,15 +58,12 @@ export const siteEn: PortfolioContent = {
             role: 'Web Developer Analyst',
             organization: 'Assembleia Legislativa do Paraná (via Facilities)',
             summary:
-                'Development, maintenance, and evolution of web systems that support real processes. System names and institutional data stay off this page. Kali Linux, the OWASP Top 10, and vulnerability investigation are in the coursework and the labs, in their own sections.',
+                'I develop and maintain web systems that support administrative workflows at the Legislative Assembly. I use Laravel, PHP, React, Inertia, and PostgreSQL to update business rules, integrate applications, and maintain production systems.',
             points: [
-                'Development and evolution of features, including frontend and backend integration.',
-                'Maintenance of existing applications and legacy systems.',
-                'Implementation of business rules, data validation, and process states.',
-                'Access control and permission management in the applications I maintain.',
-                'Authentication and authorization considered while building and maintaining the software.',
-                'Technical investigation of persistence failures, duplicate records, and HTTP 500 errors.',
-                'Database analysis and PDF document generation.',
+                'I develop features across the frontend and backend and modernize existing applications.',
+                'I implement data validation, authentication, authorization, and access controls.',
+                'I investigate application failures and data inconsistencies and maintain PDF generation workflows.',
+                'I use Kali Linux and security tools to analyze applications.',
             ],
         },
         {
@@ -70,17 +71,18 @@ export const siteEn: PortfolioContent = {
             role: 'Full Stack Developer',
             organization: 'Apis Solutions',
             summary:
-                'Full stack work with Laravel and MySQL. The public record shows the period, the role, and the stack. Internal company products are not described here.',
+                'I built web applications for business systems using PHP and Laravel.',
             points: [
-                'Development of web applications with PHP and Laravel.',
-                'Work with MySQL in business systems.',
-                'Integration of interface, business rules, and database.',
+                'I implemented and maintained features that connected user interfaces to business rules.',
+                'I used MySQL to store and query application data.',
             ],
         },
     ],
     education: [
         {
             title: 'Analysis and Systems Development',
+            description:
+                'Software development, systems analysis, and databases.',
             organization: 'PUCPR — Pontifical Catholic University of Paraná',
             period: 'In progress',
             href: '',
@@ -88,10 +90,21 @@ export const siteEn: PortfolioContent = {
         },
         {
             title: 'Full Stack Java',
+            description:
+                'Web application development with Java across backend and frontend.',
             organization: 'EBAC',
             period: 'July 2024 — October 2025',
             href: 'https://drive.google.com/file/d/1Ca7xHzrcTt5f3pLo9Sua1WgAHXBqRk9r/view',
             linkLabel: 'View certificate',
+        },
+        {
+            title: 'AWS Educate — Emerging Talent Community',
+            description:
+                'AWS Educate learning community for students building cloud skills.',
+            organization: 'Amazon Web Services',
+            period: 'November 2025',
+            href: 'https://pages.awseducate.com/ETC_badge.html',
+            linkLabel: 'View program',
         },
     ],
     credentials: [
@@ -101,7 +114,7 @@ export const siteEn: PortfolioContent = {
             period: 'June 2026',
             href: 'https://www.credly.com/badges/2271ceb0-b06c-4f8c-bdb3-82bb8955e30a',
             linkLabel: 'View credential',
-            note: 'Course completion at student level. Credly confirms the badge was issued to Igor César de Andrade and includes hands-on Kali Linux activities. LinkedIn lists June 2026.',
+            note: 'Ethical hacking and security assessment fundamentals, with hands-on analysis in Kali Linux.',
         },
         {
             title: 'Introduction to Cybersecurity',
@@ -109,17 +122,7 @@ export const siteEn: PortfolioContent = {
             period: 'June 15, 2025',
             href: 'https://www.credly.com/badges/a89c08a3-adf7-4b22-b316-104fc9b2f1bf',
             linkLabel: 'View credential',
-            note: 'Introductory course. Credly records the issue date as June 15, 2025, for Igor César de Andrade.',
-        },
-    ],
-    programs: [
-        {
-            title: 'AWS Educate — Emerging Talent Community',
-            organization: 'Amazon Web Services',
-            period: 'November 2025',
-            href: 'https://pages.awseducate.com/ETC_badge.html',
-            linkLabel: 'View program page',
-            note: 'A student learning program, not an AWS technical certification. The month comes from LinkedIn. The public page is a community badge and does not show an individual credential ID.',
+            note: 'Cybersecurity fundamentals, digital threats, and information protection.',
         },
     ],
     projects: [
@@ -129,34 +132,48 @@ export const siteEn: PortfolioContent = {
             title: 'RegulaTrack',
             kicker: 'Regulatory management platform',
             summary:
-                'A complete application for companies, branches, licenses, documents, users, and permissions. The code, the documented API, and the public demo are online.',
+                'A SaaS platform for managing companies, branches, licenses, and documents, with user permissions for individual operations.',
             problem:
-                'Keep licenses and who can operate each part of the system in one place, with authentication, a relational database, and a cloud deployment.',
+                'Centralize regulatory records, track expiration dates, and scope access to each user’s responsibilities.',
             contribution:
-                'A personal end-to-end project: Java API, Angular frontend, migrations, authorization, and AWS infrastructure.',
+                'I built the REST API and web interface, modeled the database, implemented authorization, and deployed the application on AWS over HTTPS.',
             technologies: [
                 'Java 21',
                 'Spring Boot',
                 'Spring Security',
                 'JWT',
                 'Angular',
+                'TypeScript',
+                'REST APIs',
+                'Swagger/OpenAPI',
                 'PostgreSQL',
                 'Flyway',
-                'AWS',
+                'AWS EC2',
+                'AWS RDS',
+                'Linux',
                 'Nginx',
+                'HTTPS',
             ],
-            status: 'In production, with improvements already listed in the repository.',
+            status: 'Deployed demo.',
             casePath: '/projetos/regulatrack',
             links: [
-                { label: 'Case study', href: '/projetos/regulatrack', internal: true },
+                {
+                    label: 'Case study',
+                    href: '/projetos/regulatrack',
+                    internal: true,
+                },
                 {
                     label: 'Repository',
                     href: 'https://github.com/igor-andrade-dev/RegulaTrack',
                     internal: false,
                 },
-                { label: 'Live demo', href: 'https://regulatrack.duckdns.org', internal: false },
                 {
-                    label: 'Swagger',
+                    label: 'Live demo',
+                    href: 'https://regulatrack.duckdns.org',
+                    internal: false,
+                },
+                {
+                    label: 'Swagger/OpenAPI',
                     href: 'https://regulatrack-api.duckdns.org/swagger-ui/index.html',
                     internal: false,
                 },
@@ -168,13 +185,18 @@ export const siteEn: PortfolioContent = {
             title: 'Microservices system',
             kicker: 'Customer Service and Product Service',
             summary:
-                'Two independent services, each with its own PostgreSQL database, REST API, and Swagger docs. The public README describes running the stack locally with Docker Compose.',
-            problem:
-                'Split customer and product management into services that can start, version, and document themselves independently.',
+                'Customer and product services, each with its own REST API, PostgreSQL database, and OpenAPI documentation.',
+            problem: 'Allow each service to evolve and run independently.',
             contribution:
-                'Java 17 and Spring Boot 3 APIs, Spring Data JPA, validation, and the container setup. There is no public demo.',
-            technologies: ['Java 17', 'Spring Boot 3', 'PostgreSQL', 'Docker', 'Swagger/OpenAPI'],
-            status: 'A study project, run locally. No public URL.',
+                'I built the APIs with Spring Data JPA and input validation and used Docker Compose to run the services locally.',
+            technologies: [
+                'Java 17',
+                'Spring Boot 3',
+                'PostgreSQL',
+                'Docker',
+                'Swagger/OpenAPI',
+            ],
+            status: 'Study project that runs locally.',
             links: [
                 {
                     label: 'Repository',
@@ -189,13 +211,13 @@ export const siteEn: PortfolioContent = {
             title: 'Autenticare Web',
             kicker: 'MERN authentication',
             summary:
-                'A React, Node.js, Express, and MongoDB application with registration, login, and protected routes. The login code signs a JWT and stores it in an HttpOnly cookie. The repository also includes appointment screens.',
+                'A MERN application with registration, sign-in, and protected routes.',
             problem:
-                'Keep the session out of visible browser storage and open protected routes only after authentication.',
+                'Control access to private routes and limit session token exposure to browser scripts.',
             contribution:
-                'Registration and login, bcrypt, an HttpOnly cookie, and a published frontend. The production API address is an environment variable and is not in the repository.',
+                'I connected the React interface to the Express API and implemented credential hashing and JWT authentication with an HttpOnly cookie.',
             technologies: ['MongoDB', 'Express', 'React', 'Node.js', 'JWT'],
-            status: 'Frontend published. The production API host is not documented in the public code.',
+            status: 'Frontend deployed.',
             links: [
                 {
                     label: 'Repository',
@@ -215,13 +237,13 @@ export const siteEn: PortfolioContent = {
             title: 'Clinical system',
             kicker: 'Gradual modernization',
             summary:
-                'Evolution of an existing clinical application, preserving business rules and reorganizing modules. There is no public repository for this work, so no stage is declared complete.',
+                'Gradual modernization of a legacy clinical management system, covering module updates, data migrations, and access control.',
             problem:
-                'Move a legacy system toward a more modern structure without treating the migration as if the whole product had already been rewritten.',
+                'Update the application while preserving rules for coverage, procedures, payments, attendance, and patient history.',
             contribution:
-                'Work across Laravel, PHP, React, Inertia, PostgreSQL, migrations, and permission control. Insurance plans, procedures, payments, frequencies, and anamnesis describe the domain, not a list of finished deliveries.',
+                'I worked on module restructuring, PostgreSQL migrations, and permission updates.',
             technologies: ['Laravel', 'PHP', 'React', 'Inertia', 'PostgreSQL'],
-            status: 'Completion status still needs confirmation. No public repository.',
+            status: 'Modernization in progress.',
             links: [],
         },
         {
@@ -230,13 +252,13 @@ export const siteEn: PortfolioContent = {
             title: 'Process management',
             kicker: 'Maintaining systems already in use',
             summary:
-                'Maintenance and evolution of administrative systems already in use. The work is presented without system names, servers, or institutional data.',
+                'Maintenance and development of web systems that support administrative workflows.',
             problem:
-                'Fix failures in flows that already had users, states, and documents, without rebuilding the application from scratch.',
+                'Keep workflows with multiple states and documents consistent while the application remains in use.',
             contribution:
-                'Investigation in PHP and Laravel, PostgreSQL, Eloquent, controllers, services, permission middleware, record integrity, PDFs, and process states.',
+                'I investigated inconsistent records and updated permissions, state transitions, and PDF generation.',
             technologies: ['PHP', 'Laravel', 'PostgreSQL', 'Eloquent'],
-            status: 'Anonymized professional experience. Not a public product.',
+            status: 'Applications in use.',
             links: [],
         },
         {
@@ -245,13 +267,13 @@ export const siteEn: PortfolioContent = {
             title: 'Meu Momento',
             kicker: 'Mobile application',
             summary:
-                'A personal journal and guided pauses, with local storage and on-device audio. The code confirms React Native, Expo, and TypeScript.',
+                'A mobile journal and guided-break app with on-device storage and audio.',
             problem:
-                'Offer a private space for notes and audio without an account and without sending the journal to a server.',
+                'Offer journaling and audio sessions without an account or server synchronization.',
             contribution:
-                'Mobile interface, audio, local assets, Android configuration, and EAS build preparation. Publication on Google Play is not confirmed.',
+                'I built the interface and audio features, configured Android, and prepared the build with EAS Build.',
             technologies: ['React Native', 'Expo', 'TypeScript', 'EAS Build'],
-            status: 'An MVP still evolving. Final device validation is not closed in the project README.',
+            status: 'MVP in development.',
             links: [
                 {
                     label: 'Privacy policy',
@@ -264,7 +286,7 @@ export const siteEn: PortfolioContent = {
     stack: [
         {
             title: 'Backend',
-            note: 'Used in business systems and in RegulaTrack.',
+            note: 'APIs and business logic.',
             items: [
                 'Java 21',
                 'Spring Boot',
@@ -278,23 +300,41 @@ export const siteEn: PortfolioContent = {
         },
         {
             title: 'Frontend',
-            note: 'Web interfaces and the Meu Momento app.',
-            items: ['Angular', 'TypeScript', 'React', 'Inertia', 'React Native', 'Expo', 'HTML', 'CSS'],
+            note: 'Web and mobile interfaces.',
+            items: [
+                'Angular',
+                'TypeScript',
+                'React',
+                'Inertia',
+                'React Native',
+                'Expo',
+                'HTML',
+                'CSS',
+            ],
         },
         {
             title: 'Data',
-            note: 'Modeling, migration, and integrity.',
-            items: ['PostgreSQL', 'SQL', 'Flyway', 'Migrations', 'MySQL', 'Record integrity'],
+            note: 'Persistence, migrations, and data integrity.',
+            items: [
+                'PostgreSQL',
+                'SQL',
+                'Flyway',
+                'Migrations',
+                'MySQL',
+                'Record integrity',
+            ],
         },
         {
             title: 'Cloud and infrastructure',
-            note: 'Applied in the RegulaTrack deployment.',
-            items: ['AWS EC2', 'AWS RDS', 'Linux', 'Nginx', 'HTTPS and SSL', 'Git'],
+            note: 'RegulaTrack deployment and operation.',
+            items: ['AWS EC2', 'AWS RDS', 'Linux', 'Nginx', 'HTTPS/TLS', 'Git'],
         },
         {
-            title: 'Security in development',
-            note: 'Part of building the systems, not a separate job title.',
+            title: 'Security at work',
+            note: 'Application analysis and security controls.',
             items: [
+                'Kali Linux',
+                'Security tools',
                 'Authentication',
                 'Authorization',
                 'Roles and permissions',
@@ -305,10 +345,9 @@ export const siteEn: PortfolioContent = {
         },
         {
             title: 'Lab study',
-            note: 'Courses, CTFs, and analysis in an authorized environment. Separate from professional software development.',
+            note: 'Practice through courses, CTFs, and authorized labs.',
             items: [
                 'OWASP Top 10',
-                'Kali Linux',
                 'Web application security',
                 'Vulnerability investigation',
                 'HTTP request analysis',
@@ -317,56 +356,53 @@ export const siteEn: PortfolioContent = {
         },
     ],
     securityPoints: [
-        'Backend and API contracts',
         'Authentication and authorization',
-        'Access control and permissions',
-        'Data validation and integrity',
-        'Failure investigation',
-        'Fixes that keep the existing flow working',
-        'Security testing in an authorized lab',
+        'Role- and permission-based access control',
+        'Input validation and API security',
+        'Vulnerability investigation in authorized environments',
     ],
     labs: [
         {
             name: 'GlacierCTF 2026',
-            category: 'CTF — web, cryptography, reverse engineering, and other categories',
-            objective: 'Investigate competition challenges and record what could actually be confirmed.',
-            method:
-                'Reading HTTP requests, inspecting artifacts, and separating what was observed from what was still unsolved.',
-            tools: 'Browser, HTTP, notes, and public writeups in the repository.',
+            category: 'CTF · Web, cryptography, and reverse engineering',
+            objective:
+                'I investigated security challenges across multiple competition categories.',
+            method: 'I examined HTTP requests and challenge artifacts.',
+            tools: 'Browser and HTTP analysis tools.',
             learning:
-                'An application surface includes method, encoding, cache, and upload pipeline. An HTTP status alone does not prove a vulnerability.',
-            status: 'Public writeups. Flags and exploit steps are not reproduced on this portfolio.',
+                'Web application analysis involves request behavior and how the application handles uploaded files.',
+            status: 'Writeups published.',
             href: 'https://github.com/igor-andrade-dev/ctf-writeups/tree/main/GlacierCTF-2026',
         },
         {
             name: 'SpookyCTF 2026',
-            category: 'CTF — forensics, crypto, reverse engineering, web, and steganography',
-            objective:
-                'Document solved challenges and the ones still under analysis, without treating notes as professional experience.',
-            method:
-                'Analysis of artifacts, traffic, binaries, and files, with the state of each challenge recorded in the material itself.',
-            tools: 'Python and the analysis tools cited in the writeups.',
+            category:
+                'CTF · Forensics, cryptography, reverse engineering, and web',
+            objective: 'I practiced analyzing traffic, files, and binaries.',
+            method: 'I recorded observations and results for each challenge.',
+            tools: 'Python',
             learning:
-                'Recording what was confirmed keeps a lab from becoming a conclusion larger than the evidence.',
-            status: 'Public study material. This site does not publish flags.',
+                'Organizing evidence makes it easier to resume an investigation and identify hypotheses that still need testing.',
+            status: 'Writeups published.',
             href: 'https://github.com/igor-andrade-dev/ctf-writeups/tree/main/SpookyCTF-2026',
         },
         {
             name: 'API lab',
-            category: 'Local study of API security',
-            objective: 'Practice reading HTTP responses and input validation in controlled applications.',
-            method:
-                'Scripts whose default target is loopback. Writes are off by default. The repository states that this is not a scanner.',
-            tools: 'Bash, Python, and curl, only in the lab described in the repository.',
-            learning: 'A status code is the start of the analysis, not proof of a flaw.',
-            status: 'Public repository, limited to an authorized environment.',
+            category: 'API security',
+            objective:
+                'I evaluated HTTP responses and input validation in local applications.',
+            method: 'I compared the responses with the expected behavior for each input.',
+            tools: 'Bash, Python, and curl.',
+            learning:
+                'Status codes guide the analysis. Response bodies and application rules help interpret the result.',
+            status: 'Local lab with public source code.',
             href: 'https://github.com/igor-andrade-dev/api-security-testing',
         },
     ],
     flow: [
         { label: 'User', detail: 'Browser' },
         { label: 'Angular', detail: 'Frontend and TypeScript' },
-        { label: 'HTTPS', detail: 'Nginx, proxy, and SSL' },
+        { label: 'HTTPS', detail: 'Nginx proxy and TLS' },
         { label: 'Spring Boot', detail: 'REST API in Java 21' },
         { label: 'PostgreSQL', detail: 'AWS RDS and Flyway' },
     ],
@@ -390,69 +426,58 @@ export const siteEn: PortfolioContent = {
         resume: 'Résumé',
         resumePt: 'Portuguese (PDF)',
         resumeEn: 'English (PDF)',
-        eyebrow: 'Professional portfolio',
         viewProjects: 'View projects',
         downloadResume: 'Download résumé',
         contactCta: 'Get in touch',
         photoAlt: 'Portrait of Igor Andrade',
-        aboutTitle: 'About',
+        aboutTitle: 'How I work',
         experienceTitle: 'Experience',
-        experienceIntro:
-            'Development roles. Course credentials and learning programs are listed separately, under education.',
         educationTitle: 'Education',
         credentialsTitle: 'Course credentials',
-        credentialsIntro:
-            'Completions with a public page. These are Cisco Networking Academy courses at student level, not a pentest role.',
-        programsTitle: 'Learning programs',
-        programsIntro: 'Community study participation. Not an AWS technical certification.',
         projectsTitle: 'Projects',
-        projectsIntro:
-            'A short selection. Each item says what was built, the problem, the stack, the contribution, and where the evidence is.',
         problem: 'Problem',
-        contribution: 'Contribution',
+        contribution: 'My contribution',
         state: 'Status',
         stackTitle: 'Technologies',
-        stackIntro: 'Grouped by use. There is no percentage bar: the evidence is in the projects and the experience.',
-        securityTitle: 'Security from the architecture up.',
+        securityTitle: 'Application security',
         securityBody: [
-            'I build and maintain software with authentication, authorization, access control, and validation. That professional practice is separate from offensive-security study.',
-            'In the lab and in the Cisco Networking Academy I work on the OWASP Top 10, web application security, vulnerability investigation, and Kali Linux. The CTF writeups and the API lab are public. None of that study describes a test, an audit, or a vulnerability at the Legislative Assembly.',
+            'When I build a feature, I consider who can access it, what data enters the application, and how the API enforces permissions.',
+            'I complement my professional use of security tools with OWASP Top 10 study, testing in authorized labs, and CTF challenges.',
         ],
         labsTitle: 'Security labs and CTFs',
-        labsIntro: 'Hands-on study in a controlled environment, separate from the development roles.',
+        labsIntro:
+            'Hands-on practice with competition challenges and local API analysis.',
         objective: 'Objective',
         investigation: 'Investigation',
         tools: 'Tools',
         learning: 'What I learned',
-        openMaterial: 'Open the public material',
-        contactTitle: 'Let’s talk about a real system.',
+        openMaterial: 'View material',
+        contactTitle: 'Contact',
         contactBody:
-            'I am looking for opportunities in Java backend, full stack development, software engineering, and application security. The résumé and LinkedIn are ready for a recruiter.',
+            'I’m open to discussing opportunities in software development, Java backend, and application security.',
         currentResume: 'Résumé in English',
-        footer: 'Professional portfolio.',
         email: 'Email',
     },
     caseStudy: {
         back: 'Back to projects',
         badge: 'Featured project',
-        lede: 'A platform for companies, branches, regulatory licenses, documents, users, and permissions. The description below follows the public code and the repository README.',
+        lede: 'A regulatory management platform for tracking licenses and documents by company and branch, with access controls for individual operations.',
         repo: 'Repository',
         demo: 'Live demo',
         problemTitle: 'Problem',
         problem:
-            'Licenses, units, and permissions get lost when each piece of information lives in a separate control. RegulaTrack brings that operation into one product, with expiration tracking and access limited to what each person can do.',
+            'When records and documents are scattered, tracking renewals and controlling who can update each record means reconciling multiple sources.',
         goalTitle: 'Goal',
-        goal: 'Build a complete business application: rules, API, interface, a versioned database, and an HTTPS deployment. The repository describes the project as a portfolio and a demo, not as a product with commercial metrics.',
+        goal: 'Bring those workflows into one web application with a documented API, versioned database, and HTTPS deployment.',
         architectureTitle: 'Architecture',
         architecture:
-            'This is the flow confirmed in the code and the README. There is no service beyond the ones that appear in the repository.',
+            'The Angular interface calls a Spring Boot REST API. Nginx handles HTTPS connections, while the API owns business rules and access to PostgreSQL.',
         authTitle: 'Authentication and authorization',
         auth: [
-            'Sign-in goes through Spring Security. The API issues a JWT, and the frontend sends that token on the following requests. A filter validates the token before opening the resource.',
-            'There are two roles, ADMIN and USER. USER can reach only the assigned permissions, in areas such as dashboard, companies, branches, licenses, and users. Account recovery creates a single-use token with an expiry, and the token-version migration invalidates older sessions after a credential change.',
-            'Production secrets stay in environment variables. The repository requires its own signing key and leaves the demo seed off by default.',
+            'The API uses Spring Security to authenticate users and validate JWTs on protected requests.',
+            'Roles define access profiles, and permissions determine which operations each user can perform. Account recovery uses an expiring, single-use token, and credential changes invalidate older sessions.',
         ],
-        featuresTitle: 'What the code implements',
+        featuresTitle: 'What I implemented',
         features: [
             'Companies and branches, with a link between them.',
             'Licenses with active, expiring, expired, and pending states.',
@@ -462,11 +487,12 @@ export const siteEn: PortfolioContent = {
             'Account recovery and OpenAPI documentation.',
         ],
         databaseTitle: 'Database',
-        database: 'PostgreSQL, with the schema versioned by Flyway. The public migrations follow this order:',
+        database:
+            'I modeled the data in PostgreSQL and used Flyway to version schema changes, from the initial records to session management.',
         infraTitle: 'Infrastructure',
         infra: [
-            'The frontend and the API are published. The API runs on EC2, behind Nginx with a TLS certificate. PostgreSQL is on RDS. The backend starts as a Linux service.',
-            'The repository also includes sample Nginx rate limits for the authentication routes and states that database and application ports must not be public.',
+            'I deployed the API as a Linux service on AWS EC2, with Nginx as the HTTPS proxy. PostgreSQL runs on AWS RDS.',
+            'Production secrets are supplied through environment variables, and the repository includes a reference configuration for rate limiting authentication routes.',
         ],
         decisionsTitle: 'Decisions',
         decisions: [
@@ -476,10 +502,10 @@ export const siteEn: PortfolioContent = {
             'Permission per operation, in addition to the role.',
             'Sensitive configuration kept out of Git.',
         ],
-        learningTitle: 'What I learned',
+        learningTitle: 'Lessons and next steps',
         learning: [
-            'The value of the project is crossing the whole application: business rules, security, database migration, and the server. What is still unfinished is also visible. The README itself lists test coverage, pagination, observability, and a CI pipeline as next steps. The workflow file in the repository is disabled.',
-            'There are no screenshots in this case study. The published interface is the visual evidence, in the links above.',
+            'Deployment showed me how authorization, configuration, and schema migration decisions affect day-to-day operation.',
+            'Next steps include expanding test coverage, implementing pagination, and improving observability and continuous integration.',
         ],
         talk: 'Talk about this project',
     },

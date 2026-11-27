@@ -1,12 +1,16 @@
 <header class="site-header">
-    <div class="frame header-bar">
+    <div class="frame header-bar" (keydown.escape)="dismissMenu(menuButton)">
         <a class="wordmark" routerLink="/" fragment="inicio" (click)="close()">
             <span>Igor Andrade</span>
             <small>{{ text().ui.wordmark }}</small>
         </a>
 
         <div class="header-end">
-            <div class="lang-switch" role="group" [attr.aria-label]="text().ui.language">
+            <div
+                class="lang-switch"
+                role="group"
+                [attr.aria-label]="text().ui.language"
+            >
                 <button
                     type="button"
                     [class.is-active]="locale.lang() === 'pt'"
@@ -26,6 +30,7 @@
             </div>
 
             <button
+                #menuButton
                 class="menu-button"
                 type="button"
                 [attr.aria-expanded]="open()"
@@ -35,17 +40,30 @@
                 {{ open() ? text().ui.close : text().ui.menu }}
             </button>
 
-            <nav id="menu-principal" class="site-nav" [class.is-open]="open()" [attr.aria-label]="text().ui.navLabel">
+            <nav
+                id="menu-principal"
+                class="site-nav"
+                [class.is-open]="open()"
+                [attr.aria-label]="text().ui.navLabel"
+            >
                 @for (item of text().nav; track item.fragment) {
-                    <a [routerLink]="['/']" [fragment]="item.fragment" (click)="close()">
+                    <a
+                        [routerLink]="['/']"
+                        [fragment]="item.fragment"
+                        (click)="close()"
+                    >
                         {{ item.label }}
                     </a>
                 }
                 <details class="resume-menu">
                     <summary>{{ text().ui.resume }}</summary>
                     <div>
-                        <a [href]="text().links.resumePt" download>{{ text().ui.resumePt }}</a>
-                        <a [href]="text().links.resumeEn" download>{{ text().ui.resumeEn }}</a>
+                        <a [href]="text().links.resumePt" download>{{
+                            text().ui.resumePt
+                        }}</a>
+                        <a [href]="text().links.resumeEn" download>{{
+                            text().ui.resumeEn
+                        }}</a>
                     </div>
                 </details>
             </nav>

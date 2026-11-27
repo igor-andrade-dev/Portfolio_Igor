@@ -1,16 +1,36 @@
 <section class="hero" id="inicio">
     <div class="frame hero-grid">
         <div class="hero-copy">
-            <p class="eyebrow">{{ text().ui.eyebrow }}</p>
             <h1>Igor Andrade</h1>
             <p class="role">{{ text().role }}</p>
-            <blockquote>{{ text().impact }}</blockquote>
-            <p class="lede">{{ text().about[0] }}</p>
+            <p class="hero-statement">{{ text().impact }}</p>
+            <p class="lede">{{ text().heroDescription }}</p>
             <div class="actions">
-                <a class="button button-primary" routerLink="/" fragment="projetos">{{ text().ui.viewProjects }}</a>
-                <a class="button button-secondary" [href]="resumeHref()" download>{{ text().ui.downloadResume }}</a>
-                <a class="button button-ghost" [href]="text().links.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a class="button button-ghost" routerLink="/" fragment="contato">{{ text().ui.contactCta }}</a>
+                <a
+                    class="button button-primary"
+                    routerLink="/"
+                    fragment="projetos"
+                    >{{ text().ui.viewProjects }}</a
+                >
+                <a
+                    class="button button-secondary"
+                    [href]="resumeHref()"
+                    download
+                    >{{ text().ui.downloadResume }}</a
+                >
+                <a
+                    class="button button-ghost"
+                    [href]="text().links.linkedin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >LinkedIn</a
+                >
+                <a
+                    class="button button-ghost"
+                    routerLink="/"
+                    fragment="contato"
+                    >{{ text().ui.contactCta }}</a
+                >
             </div>
         </div>
 
@@ -22,7 +42,6 @@
                 priority
                 [alt]="text().ui.photoAlt"
             />
-            <figcaption>Igor Andrade</figcaption>
         </figure>
     </div>
 </section>
@@ -30,11 +49,10 @@
 <section class="section" id="sobre">
     <div class="frame split">
         <div>
-            <p class="index">01</p>
             <h2>{{ text().ui.aboutTitle }}</h2>
         </div>
         <div class="prose">
-            @for (paragraph of text().about.slice(1); track paragraph) {
+            @for (paragraph of text().about; track paragraph) {
                 <p>{{ paragraph }}</p>
             }
         </div>
@@ -44,9 +62,7 @@
 <section class="section section-alt" id="experiencia">
     <div class="frame">
         <div class="section-heading">
-            <p class="index">02</p>
             <h2>{{ text().ui.experienceTitle }}</h2>
-            <p>{{ text().ui.experienceIntro }}</p>
         </div>
 
         <ol class="timeline">
@@ -72,8 +88,17 @@
                     <li>
                         <strong>{{ item.title }}</strong>
                         <span>{{ item.organization }} · {{ item.period }}</span>
+                        <p>{{ item.description }}</p>
                         @if (item.href) {
-                            <a [href]="item.href" target="_blank" rel="noopener noreferrer">{{ item.linkLabel }}</a>
+                            <a
+                                [href]="item.href"
+                                [attr.aria-label]="
+                                    item.linkLabel + ': ' + item.title
+                                "
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >{{ item.linkLabel }}</a
+                            >
                         }
                     </li>
                 }
@@ -82,29 +107,21 @@
 
         <div class="education">
             <h3>{{ text().ui.credentialsTitle }}</h3>
-            <p>{{ text().ui.credentialsIntro }}</p>
             <ul>
                 @for (item of text().credentials; track item.href) {
                     <li>
                         <strong>{{ item.title }}</strong>
                         <span>{{ item.organization }} · {{ item.period }}</span>
-                        <span>{{ item.note }}</span>
-                        <a [href]="item.href" target="_blank" rel="noopener noreferrer">{{ item.linkLabel }}</a>
-                    </li>
-                }
-            </ul>
-        </div>
-
-        <div class="education">
-            <h3>{{ text().ui.programsTitle }}</h3>
-            <p>{{ text().ui.programsIntro }}</p>
-            <ul>
-                @for (item of text().programs; track item.href) {
-                    <li>
-                        <strong>{{ item.title }}</strong>
-                        <span>{{ item.organization }} · {{ item.period }}</span>
-                        <span>{{ item.note }}</span>
-                        <a [href]="item.href" target="_blank" rel="noopener noreferrer">{{ item.linkLabel }}</a>
+                        <p>{{ item.note }}</p>
+                        <a
+                            [href]="item.href"
+                            [attr.aria-label]="
+                                item.linkLabel + ': ' + item.title
+                            "
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >{{ item.linkLabel }}</a
+                        >
                     </li>
                 }
             </ul>
@@ -115,16 +132,19 @@
 <section class="section" id="projetos">
     <div class="frame">
         <div class="section-heading">
-            <p class="index">03</p>
             <h2>{{ text().ui.projectsTitle }}</h2>
-            <p>{{ text().ui.projectsIntro }}</p>
         </div>
 
         <div class="project-list">
             @for (project of text().projects; track project.id) {
-                <article class="project" [class.project-featured]="project.id === 'regulatrack'">
+                <article
+                    class="project"
+                    [class.project-featured]="project.id === 'regulatrack'"
+                >
                     <header>
-                        <p class="badge">{{ project.badge }}</p>
+                        @if (project.id === 'regulatrack') {
+                            <p class="badge">{{ project.badge }}</p>
+                        }
                         <h3>{{ project.title }}</h3>
                         <p class="kicker">{{ project.kicker }}</p>
                     </header>
@@ -152,9 +172,25 @@
                         <div class="actions">
                             @for (link of project.links; track link.href) {
                                 @if (link.internal) {
-                                    <a class="button button-secondary" [routerLink]="link.href">{{ link.label }}</a>
+                                    <a
+                                        class="button button-secondary"
+                                        [routerLink]="link.href"
+                                        [attr.aria-label]="
+                                            link.label + ': ' + project.title
+                                        "
+                                        >{{ link.label }}</a
+                                    >
                                 } @else {
-                                    <a class="button button-ghost" [href]="link.href" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+                                    <a
+                                        class="button button-ghost"
+                                        [href]="link.href"
+                                        [attr.aria-label]="
+                                            link.label + ': ' + project.title
+                                        "
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >{{ link.label }}</a
+                                    >
                                 }
                             }
                         </div>
@@ -168,9 +204,7 @@
 <section class="section section-alt" id="tecnologias">
     <div class="frame">
         <div class="section-heading">
-            <p class="index">04</p>
             <h2>{{ text().ui.stackTitle }}</h2>
-            <p>{{ text().ui.stackIntro }}</p>
         </div>
         <div class="stack-grid">
             @for (group of text().stack; track group.title) {
@@ -191,7 +225,6 @@
 <section class="section" id="seguranca">
     <div class="frame security">
         <div>
-            <p class="index">05</p>
             <h2>{{ text().ui.securityTitle }}</h2>
             @for (paragraph of text().ui.securityBody; track paragraph) {
                 <p>{{ paragraph }}</p>
@@ -208,7 +241,6 @@
 <section class="section section-alt" id="laboratorios">
     <div class="frame">
         <div class="section-heading">
-            <p class="index">06</p>
             <h2>{{ text().ui.labsTitle }}</h2>
             <p>{{ text().ui.labsIntro }}</p>
         </div>
@@ -236,7 +268,15 @@
                         </div>
                     </dl>
                     <p class="status">{{ lab.status }}</p>
-                    <a [href]="lab.href" target="_blank" rel="noopener noreferrer">{{ text().ui.openMaterial }}</a>
+                    <a
+                        [href]="lab.href"
+                        [attr.aria-label]="
+                            text().ui.openMaterial + ': ' + lab.name
+                        "
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >{{ text().ui.openMaterial }}</a
+                    >
                 </article>
             }
         </div>
@@ -245,14 +285,29 @@
 
 <section class="section contact" id="contato">
     <div class="frame contact-panel">
-        <p class="index">07</p>
         <h2>{{ text().ui.contactTitle }}</h2>
         <p>{{ text().ui.contactBody }}</p>
         <div class="actions">
-            <a class="button button-primary" href="mailto:{{ text().email }}">{{ text().email }}</a>
-            <a class="button button-secondary" [href]="text().links.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="button button-ghost" [href]="text().links.github" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a class="button button-ghost" [href]="resumeHref()" download>{{ text().ui.currentResume }}</a>
+            <a class="button button-primary" href="mailto:{{ text().email }}">{{
+                text().email
+            }}</a>
+            <a
+                class="button button-secondary"
+                [href]="text().links.linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+            >
+            <a
+                class="button button-ghost"
+                [href]="text().links.github"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+            >
+            <a class="button button-ghost" [href]="resumeHref()" download>{{
+                text().ui.currentResume
+            }}</a>
         </div>
     </div>
 </section>
